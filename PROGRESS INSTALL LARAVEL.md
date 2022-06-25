@@ -50,8 +50,180 @@ php artisa serve
 
   ![7.png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/7.png?raw=true)
 
+## FINAL PROJECT [CHAPTER 2]
 
+- Jalankan xampp, Vs Code dan phpmyadmin
 
-​	
+- Buatlah database pada phpmyadmin
 
-# 	THANK YOU
+- Pada Vs Code : Open folder -> (C;) -> tubespi -> Select Folder
+
+  ![(1).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(1).png?raw=true)
+
+  ![(2).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(2).png?raw=true)
+
+- masuk pada folder .env, atur sesuai dengan database yang telah di buat
+
+  ```
+  DB_DATABASE=tubespi
+  DB_USERNAME=root
+  DB_PASSWORD=
+  ```
+
+  ![(3).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(3).png?raw=true)
+
+- Buka Terminal yang ada pada Vs Code
+
+   ![(4).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(4).png?raw=true)
+
+  ketikkan perintah berikut pada terminal
+
+  ```
+  php artisan serve
+  ```
+
+  ![(5).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(5).png?raw=true)
+
+​		Lalu buka browser, dan ketikkan 	
+
+```
+http://127.0.0.1:8000
+```
+
+​		![(6).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(6).png?raw=true)
+
+​		Maka akan muncul tampilan seperti berikut,
+
+​		![(7).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(7).png?raw=true)
+
+- ketikkan perintah berikut pada terminal
+
+  ```
+  php artisan make:migration create_rss_table
+  ```
+
+  ![(8).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(8).png?raw=true)
+
+  ![(9).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(9).png?raw=true)
+
+- kemudian buka file "create_rss_table.php", lalu isi sesuai skema database yang di inginkan 
+
+  ![(10).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(10).png?raw=true)
+
+- kemudian buka file "create_news_table.php", lalu isi sesuai skema database yang di inginkan 
+
+  ![(11).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(11).png?raw=true)
+
+- beri Foreign Key pada tabel news_table.php
+
+  ```
+   //FOREIGN KEY
+              $table->unsignedBigInteger('rss_id');
+              $table->foreign('rss_id')->references('id')->on('rss');
+              $table->timestamps();
+  ```
+
+  ![(12).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(12).png?raw=true)
+
+- kembali ke terminal, untuk merefresh. gunakan perintah :
+
+  ```
+  php artisan migrate:fresh
+  ```
+
+  ![(13).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(13).png?raw=true)
+
+  kemudian cek pada database phpmyadmin
+
+  ![(14).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(14).png?raw=true)
+
+- kembali ke terminal lagi, dan ketikkan perintah di bawah ini, untuk membuat model rss seed controller
+
+  ```
+  php artisan make:model Rss --seed --controller
+  ```
+
+  ![(15).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(15).png?raw=true)
+
+- untuk melihatnya, buka folder Models. maka sudah terdapat 2 file 
+
+  Rss.php dan User.php
+
+  ![(16).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(16).png?raw=true)
+
+- buka file Rss.php dan isi sesuai pada gambar di bawah ini :
+
+  ![(17).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(17).png?raw=true)
+
+  ![(18).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(18).png?raw=true)
+
+- lalu buka folder seeders, dan buka file RssSeeder.php dan isi sesuai pada gambar dibawah ini :
+
+  ![(19).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(19).png?raw=true)
+
+- lalu buka folder seeders, dan buka file DatabaseSeeder.php dan isi sesuai pada gambar dibawah ini :
+
+  ![(20).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(20).png?raw=true)
+
+- Cek Phpmyadmin untuk memastikan apakah url sudah masuk pada database
+
+  ![(21).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(21).png?raw=true)
+
+- kembali ke terminal dan ketikkan perintah dibawah ini, untuk membuat model News controller
+
+  ```
+  php artisan make:model News --controller
+  ```
+
+  ![(22).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(22).png?raw=true)
+
+- masuk pada file News.php, dan ketikkan perintah 
+
+  ```
+  protected $table='news';
+      //bahwa pada model news ->menggunakan table news
+      protected $fillable=['title','img_url','description','source_url','rss_id'];
+      //bahwa hanya bisa diisi untuk kolom
+  ```
+
+  ![(23).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(23).png?raw=true)
+
+- Masuk pada folder controllers dan buka pada NewsController. isi sesuai gambar berikut
+
+  ![(24).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(24).png?raw=true)
+
+- Kemudian buka file web.php dan isi sesuai pada gambar di bawah
+
+  ![(25).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(25).png?raw=true)
+
+  ![(26).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(26).png?raw=true)
+
+- Buka file NewsController.php dan isi sesuai dengan gambar, jika sudah 
+
+  Maka buka browser untuk mengecek
+
+  ![(29).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(29).png?raw=true)
+
+  ![(27).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(27).png?raw=true)
+
+  ![(28).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(28).png?raw=true)
+
+- kemudian buka RssSeeder.php dan isi sesuai pada gambar di bawah ini :
+
+  dan referesh pada terminal 
+
+  ![(30).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(30).png?raw=true)
+
+  ![(31).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(31).png?raw=true)
+
+- lalu cek pada browser 
+
+  dan Hasilnya
+
+  ![(32).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(32).png?raw=true)
+
+  ![(33).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(33).png?raw=true)
+
+  ![(34).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(34).png?raw=true)
+
+​ # THANK YOU
