@@ -233,8 +233,8 @@ http://127.0.0.1:8000
   2. sport : http://www.koreatimes.co.kr/www/rss/sports.xml
   3. entertainment : http://www.koreatimes.co.kr/www/rss/entertainment.xml
 
-  ![35.png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/35.png?raw=true)
-  ![36.png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/36.png?raw=true)
+  ![35](https://user-images.githubusercontent.com/92932656/178118463-babca233-b074-4747-ad55-093b8a343288.PNG)
+  ![36](https://user-images.githubusercontent.com/92932656/178118469-a3ad7784-6513-4d98-97ee-bcb1d0a64cd0.PNG)
 
 
-​ TERIMAKASIH :))
+## GOMAWOYOO
