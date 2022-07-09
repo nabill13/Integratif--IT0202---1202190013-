@@ -225,5 +225,16 @@ http://127.0.0.1:8000
   ![(33).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(33).png?raw=true)
 
   ![(34).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(34).png?raw=true)
+  
+  ## FINAL PROJECT [CHAPTER 3]
+  
+  RSS yang di pake : 
+  1. Allnews : http://www.koreatimes.co.kr/www/rss/rss.xml
+  2. sport : http://www.koreatimes.co.kr/www/rss/sports.xml
+  3. entertainment : http://www.koreatimes.co.kr/www/rss/entertainment.xml
+
+  ![35.png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/35.png?raw=true)
+  ![36.png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/36.png?raw=true)
+
 
 ​ TERIMAKASIH :))
