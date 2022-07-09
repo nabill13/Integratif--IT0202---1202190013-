@@ -226,4 +226,4 @@ http://127.0.0.1:8000
 
   ![(34).png](https://github.com/nabill13/Integratif--IT0202---1202190013-/blob/main/(34).png?raw=true)
 
-​ THANK YOU
+​ TERIMAKASIH :))
